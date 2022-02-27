@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Exploring and measuring smell</h1>
+						<p></p>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<h2 id="differential-gene-expression-data">Differential gene expression data</h2>
+								<p>The data table below is prepossessed by DEseq2 to calculate gene-level differential expression.</p>
+									<pre><code>##      ensembl_gene_id     logFC          FDR No1 No2 No3  ST1  ST2  ST3       id
+## 1 ENSMUSG00000059069 2.5448640 6.676352e-65 144 298 249 1299 1764 1605  Olfr749
+## 2 ENSMUSG00000053815 2.4720328 2.460729e-21  40 100  54  388  421  407  Olfr744
+## 3 ENSMUSG00000075200 2.1649039 2.596337e-17  49  62  55  356  255  285 Olfr1044
+## 4 ENSMUSG00000049528 1.7708260 2.680831e-09  29  57  46  183  189  155  Olfr429
+## 5 ENSMUSG00000050028 1.0149519 1.436028e-06 187 265 264  500  547  672  Olfr745
+## 6 ENSMUSG00000062782 0.9350916 5.008757e-04 291 304 348 1061  569  606  Olfr527</code></pre>
+								
+								<p>From such data table it’s hard to understand what we’re looking for or what’s actually different. Therefore it’s often a good idea to restructure your data table into simpler form. Also keep in mind that when trimming data table, different analysis may require different measurements and structure.</p>
+								
+								<h2 id="volcano-plot">Volcano plot</h2>
+								<p>A simple way to visualize and differential gene expression is through a volcano plot. The volcano plot showcases the genes that are either enriched in mouse given odor (right side) or control (left).
+									<img src="/images/1_Olfaction/volcano.png" /></br>
+									Although there are advantages to volcano plots displaying the differentially expressed 
+									genes easily from the DEseq2 output. Volcano plots are one dimensional and only looks 
+									at raw fold change values and FDR. 
+								</p>
+
+								
+								<h2 id="ways-to-visualize-data">Ways to visualize data</h2>
+								<p>
+									Additionally we can utilize different data analysis and plots to visualize and more importantly ask different questions.
+									A classic way of visualizing how different certain samples are is to utilize the principle component analysis (pca). 
+									The PCA is a great tool to visualize a multi-dimensional data. 
+									As principle component metric is able to compile X numbers of numeric metrics into a 2 dimensional space. 
+									And therefore on a plot, it showcases the closer the samples are the more similarity they have. 
+								</p>
+								<img src="/images/1_Olfaction/pca.png" />
+								<p>Here we can broadly observe that most chemical groups does not have an global impact in driving overall OR activation. However, certain groups of odor are robust enough to deviate, such as the thiazole and Ketones category.</p>
+								
+								<h2 id="heatmap">Heatmap</h2>
+								<p>
+									Another interesting way of visualizing such data is to use heatmap. 
+									Heatmap is extremely efficient in looking at large datasets and finding certain trends or unique outliers.
+									<img src="/images/1_Olfaction/heatmap.png" 
+										width=100%/>
+								</p>
+
+								<h2 id="dotplot-search-function">Dotplot search function</h2>
+								<p>
+									Say that we’re interested in a certain chemical, in this case 2-Methyl-2-Thiazoline 
+									(2mt). Since 2mt is one of the very few odors in the natural environment that 
+									suppress or reduce activation of certain ORs we’re interested in those corresponding
+									ORs. One simple thing you can do is to do a reverse search. Since we know the subset
+									of ORs that are inhibited by 2mt, we’re interested in seeing what odors do those 
+									specific ORs also are responding to. We take those ORs are search our data, and a
+									good way of illustrating such idea is to not only look at logFC but also how significant is such result depicted by FDR value.</p>
+								<p>
+									<img src="/images/1_Olfaction/dotplot.png" 
+									width=100%/>
+
+									This is not the end of the analysis. But hopefully this vignette demonstrated that data analysis is extremely fun and provides multiple angle in how you can visualize and ask different questions in a complex biological dataset.
+								</p>
+
+							</section>
+
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h1>Contact</h1>
+							<dl class="alt">
+								<dt>Github</dt>
+								<dd><a href="https://github.com/Justice-Lu">https://github.com/Justice-Lu</a></dd>
+								<dt>Email</dt>
+								<dd><a href="#">hyjusticelu@gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="hyjusticelu@gmail.com" class="icon brands fa-google alt"><span class="label">Google</span></a></li>
+								<li><a href="https://github.com/Justice-Lu" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/justice-lu-1842a395/" class="icon brands fa-linkedin alt"><span class="label">fa-linkedin</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+			</div>
+	</body>
+</html>
