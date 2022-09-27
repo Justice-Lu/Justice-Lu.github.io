@@ -72,6 +72,21 @@ input, select, textarea {
 	appearance: none;
 }
 
+
+/* FOR INTERACTIVE BACKGROUND PARTICLES */
+
+#tsparticles {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* background-color: rgb(255, 255, 255); */
+	/* background-image: url(""); */
+	/* background-repeat: no-repeat; */
+	/* background-size: cover; */
+	/* background-position: 50% 50%; */
+	/* opacity: 50%; */
+  }
+
 /* Basic */
 
 	@-ms-viewport {
@@ -100,11 +115,6 @@ input, select, textarea {
 
 	body {
 		background-color: #222222;
-		/* background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%); */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2645,14 +2655,14 @@ input, select, textarea {
 			font-size: 2em;
 		}
 
-			header.major h2:after {
+			/* header.major h2:after {
 				display: block;
 				content: '';
 				width: 3.25em;
 				height: 3px;
 				margin: 0em 0 1em 0;
 				border-radius: 2px;
-			}
+			} */
 
 				section.special header.major h2:after, article.special header.major h2:after {
 					margin-left: auto;
@@ -3073,13 +3083,22 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 20em 5em 20em 5em ;
+		padding: 0em 5em 0em 5em ;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 35vh;
+		margin-bottom: 40vh;
+		/* vertical-align: middle; */
 		text-align: center;
 		min-width: 100%;
 		height: 100%;
 	}
 		#header h1 {
 			margin: 0 0 0.25em 0;
+			padding: 0em 0em 0em 0em ;
+			min-width: 0%;
+			height: 0%;
 		}
 
 		#header p {
@@ -3218,8 +3237,8 @@ input, select, textarea {
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease; */
 		background-color: #ffffff;
-		color: #a5a5a5;
-		position: middle;
+		color: #c1c1c1;
+		position: center;
 		width: 64em;
 		max-width: calc(100% - 4em);
 		padding: 1em;
@@ -3251,7 +3270,7 @@ input, select, textarea {
 		}
 
 		#nav code {
-			background: rgba(222, 222, 222, 0.25);
+			background: rgb(222, 222, 222);
 			border-color: #dddddd;
 		}
 
@@ -3275,9 +3294,9 @@ input, select, textarea {
 				-ms-transition: margin 0.2s ease;
 				transition: margin 0.2s ease;
 				display: inline-block;
-				margin: 0 0.35em;
+				margin: 0 0em;
 				padding: 0;
-				vertical-align: middle;
+				vertical-align: center;
 			}
 
 				#nav ul li a {
@@ -3290,8 +3309,9 @@ input, select, textarea {
 					line-height: 2.25em;
 					padding: 0 1.25em;
 					border: 0;
-					border-radius: 8px;
+					border-radius: 100px;
 					box-shadow: inset 0 0 0 1px transparent;
+					background: rgba(104, 104, 104, 0.571);
 				}
 
 					#nav ul li a:hover {
@@ -3299,7 +3319,7 @@ input, select, textarea {
 					}
 
 					#nav ul li a.active {
-						background-color: #ffffff00;
+						background-color: #ffffffbf;
 						box-shadow: none;
 					}
 
@@ -3336,9 +3356,11 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
-		color: #636363;
-		border-radius: 0.25em;
+		background-color: #fffffff0;
+		color: #000000; 
+		border-radius: 5em;
+		border-width: 10em;
+		/* max-width: 95%; */
 	}
 
 		#main input, #main select, #main textarea {
@@ -3354,7 +3376,7 @@ input, select, textarea {
 		}
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
-			color: #636363;
+			color: #000000;
 		}
 
 		#main blockquote {
@@ -3535,11 +3557,11 @@ input, select, textarea {
 			}
 
 			#main .icon.alt:active {
-				background-color: rgba(222, 222, 222, 0.5);
+				background-color: rgba(222, 222, 222, 0);
 			}
 
 		#main ul.alt li {
-			border-top-color: #dddddd;
+			border-top-color: #dddddd00;
 		}
 
 		#main dl dt {
@@ -3584,7 +3606,7 @@ input, select, textarea {
 
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
-			border-top: solid 1px #dddddd;
+			/* border-top: solid 1px #dddddd; */
 		}
 
 			#main > .main:first-child {
@@ -3751,7 +3773,6 @@ input, select, textarea {
 			#footer {
 				padding: 3em 1.5em 1em 1.5em ;
 			}
-
 		}
 
 		@media screen and (max-width: 480px) {
@@ -3779,9 +3800,7 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 360px) {
-
 			#wrapper {
 				max-width: 100%;
 			}
-
 		}

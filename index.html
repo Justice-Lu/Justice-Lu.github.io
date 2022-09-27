@@ -4,156 +4,207 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+
+
+
 <html>
 	<head>
 		<title>Stellar by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript> -->
 	</head>
-	<body class="is-preload">
+	<body>
+		<div id="tsparticles" style="position:fixed;width:100%;z-index:-10;"></div>
+		<script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
+		<!-- https://www.jsdelivr.com/package/npm/tsparticles -->
+		<!-- The bundle file contains all the necessary scripts for the full version, instead of manually including them all -->
+		<!--<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.6/tsparticles.bundle.min.js"></script>-->
+		<script type="text/javascript">
+		// All options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
+		// The slim version doesn't have the following plugins:
+		// Absorbers, Emitters, PolygonMask, Interactivity Trail
+		const options = {
+			background: {
+			color: "#000", // the canvas background color
+			},
+			interactivity: {
+				events: {
+					onClick: {
+					// this handles the mouse click event
+					enable: true,
+					mode: "repulse", 
+					},
+					onHover: {
+					// this handles the mouse hover event
+					enable: true,
+					mode: "grab", 
+					},
+				},
+			modes: {
+					grab: {
+						distance: 0,
+						line_linked: {
+							opacity: 1}
+						},
+					bubble: {
+						distance: 100,
+						size: 10,
+						duration: 1,
+						opacity: 1,
+						speed: 3},
+					repulse: {
+						distance: 300,
+						duration: 1.5},
+					push: {
+						particles_nb: 3},
+					remove: {
+						particles_nb: 2}
+					},
+				},
+			particles: {
+				links: {
+					enable: true, // this enables links between particles
+					opacity: 0,
+					distance: 100,
+				},
+				move: {
+					enable: true, // this makes particles move
+					speed: { min: 0.01, max: 0.5 }, // this is the speed of the particles
+				},
+				opacity: {
+					value: { min: 0.3, max: 1 }, // this sets the opacity of the particles
+				},
+				size: {
+					value: { min: 2, max: 10 }, // this sets the size of the particles
+				},
+			},
+		};
 
-
+		// tsParticles.load has two parameters, the first one is the id of the container, the second one is an object with the options
+		tsParticles.load("tsparticles", options);
+		</script>
 		<div id="header">
 			<!-- Header -->
 				<!-- <span class="logo"><img src="images/logo.svg" alt="" /></span> -->
-				<h1>Justice Lu</h1>
+				<h1><b>Justice Lu</b></h1>
 				<h2>inspired to solve challenges and motivated to transform data experience</h2>
-				<p>PhD. Candidate at Duke University 
-					<br/>
-					Molecular Genetics and Microbiology
+				<p>PhD. Candidate at Duke University<br/>
+				Molecular Genetics and Microbiology
 				</p>
+				
 				<nav id="nav">
 					<ul>
-						<li><a href="#intro">About me</a></li>
-						<li><a href="#first">Goal</a></li>
-						<li><a href="#second">Research</a></li>
+						<li><a href="index.html#intro">About me</a></li>
+						<li><a href="index.html#first">Goal</a></li>
+						<li><a href="index.html#second">Research</a></li>
 						<li><a href="#footer">contact</a></li>
 					</ul>
 				</nav>
 		</div>
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<!-- <div id="wrapper"> -->
+				<div id="main">
+					<section id="intro" class="main">
+						<header class="major">
+							<h2>About me</h2>
+							<p>
+								I am currently a PhD candidate at Duke University in the department of 
+								<a href="https://mgm.duke.edu/">Molecular Genetics and Microbiology</a>
+								advised by <a href="https://mgm.duke.edu/faculty-and-research/primary-faculty/hiroaki-matsunami-phd/">Dr. Hiroaki Matsunami</a>.
+								<br/>
+								<br/>
+								My interest lies in understanding how our perception of smell may be influenced by the micro-organisms residing in our nose. More broadly, I am motivated to learn and utilize computational framework to analyze and transform complex datasets into a visually intuitive manner. 
+								<br/>
+								<br/>
+								My expertise includes python, R, single cell sequencing and protein modeling. 
+								I'm driven to become a well rounded data scientist to bridge the gap between biological research and data.									
+							</p>
+						</header>
+						<!-- <span class="image"><img src="images/Justice_Headshot-modified.jpeg" alt="" /></span> -->
+					</section>
 
-				<!-- Nav -->
-					<!-- <nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">About me</a></li>
-							<li><a href="#first">Goal</a></li>
-							<li><a href="#second">Research</a></li>
-							<li><a href="#footer">contact</a></li>
-						</ul>
-					</nav> -->
+					<section id="first" class="main">
+						<header class="major">
+							<h2>Goal</h2>
+						
+						<p >My main motivation is to not only make biological research data more intuitive and understandable by the general public but also finding different strategies to analyze and visualize datasets. 
+							<br/>
+							<br/>
+							For example imagine a mice presented with a flower, and ask the question of how do we know if the mice is smelling the flower? 
+							<br/>
+							In order to quantitatively measure how much the mice perceive the floural smell I incoporate experimental generated biological readouts with computational data wrangling to translate complex biological data into a variety of intepreble diagrams. 
+							<br/>
+							<br/>
+							In this website I will update some of the small projects that I have worked with on the side to hopefully showcase some basic tutorials.
+						</p>
+						<img src="images/webpage_data_visualization.png" 
+								width=100%
+								/>
+						</header>
 
-				<!-- Main -->
-					<div id="main">
+					</section>
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>About me</h2>
-										<p>
-											I am currently a PhD candidate at Duke University in the department of 
-											<a href="https://mgm.duke.edu/">Molecular Genetics and Microbiology</a>
-											advised by <a href="https://mgm.duke.edu/faculty-and-research/primary-faculty/hiroaki-matsunami-phd/">Dr. Hiroaki Matsunami</a>.
-											<br/>
-											<br/>
-											My interest lies in understanding how our perception of smell may be influenced by the micro-organisms residing in our nose. More broadly, I am motivated to learn and utilize computational framework to analyze and transform complex datasets into a visually intuitive manner. 
-											<br/>
-											<br/>
-											My expertise includes python, R, single cell sequencing and protein modeling. 
-											I'm driven to become a well rounded data scientist to bridge the gap between biological research and data.									
-										</p>
-										</header>
-									</div>
-									<!-- <span class="image"><img src="images/Justice_Headshot-modified.jpeg" alt="" /></span> -->
-								</div>
-							</section>
+					<section id="second" class="main">
+						<h1>Projects</h>
+						<header class="major special">
+								<h4><b>Protein modeling</b></h4>
+								<p>
+									<a href="2_Protein_modeling.html">
+										<img src="images/2_Protein_modeling/OR5A2.gif"
+										width=50%
+										alt="Click Here"/>
+									</a>
+							</p>
+						</header>
+					<!-- </section> -->
 
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Goal</h2>
-								
-								<p >My main motivation is to not only make biological research data more intuitive and understandable by the general public but also finding different strategies to analyze and visualize datasets. 
-									<br/>
-									<br/>
-									For example imagine a mice presented with a flower, and ask the question of how do we know if the mice is smelling the flower? 
-									<br/>
-									In order to quantitatively measure how much the mice perceive the floural smell I incoporate experimental generated biological readouts with computational data wrangling to translate complex biological data into a variety of intepreble diagrams. 
-									<br/>
-									<br/>
-									In this website I will update some of the small projects that I have worked with on the side to hopefully showcase some basic tutorials.
-								</p>
-								<img src="images/webpage_data_visualization.png" 
-										width=100%
-										/>
-								</header>
-
-							</section>
-
-							
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Exploring and quantifying smell</h2>
-									<p>
-										<a href="1_Olfaction.html">
-											<img src="images/1_Olfaction/pca.png"
-											width=50%
-											alt="Click Here"/>
-										</a>
-									</p>
-								</header>
-							</section>
-
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Protein modeling</h2>
-									<p>
-										<a href="2_Protein_modeling.html">
-											<img src="images/2_Protein_modeling/OR5A2.gif"
-											width=50%
-											alt="Click Here"/>
-										</a>
-									</p>
-								</header>
-							</section>
-					</div>
-
-
+					<!-- <section id="second" class="main special"> -->
+						<header class="major special">
+							<h4><b>Exploring and quantifying smell</b></h4>
+							<p>
+								<a href="1_Olfaction.html">
+									<img src="images/1_Olfaction/pca.png"
+									width=50%
+									alt="Click Here"/>
+								</a>
+							</p>
+						</header>
+					</section>
+				</div>
 				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h1>Contact</h1>
-							<dl class="alt">
-								<dt>Github</dt>
-								<dd><a href="https://github.com/Justice-Lu">https://github.com/Justice-Lu</a></dd>
-								<dt>Email</dt>
-								<dd><a href="#">hyjusticelu@gmail.com</a></dd>
-								<dt>Linkedin</dt>
-								<dd><a href="https://www.linkedin.com/in/justice-lu-1842a395/">https://www.linkedin.com/in/justice-lu</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="hyjusticelu@gmail.com" class="icon brands fa-google alt"><span class="label">Google</span></a></li>
-								<li><a href="https://github.com/Justice-Lu" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/justice-lu-1842a395/" class="icon brands fa-linkedin alt"><span class="label">fa-linkedin</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+				<footer id="footer">
+					<section>
+						<h1>Contact</h1>
+						<dl class="alt">
+							<dt>Github</dt>
+							<dd><a href="https://github.com/Justice-Lu">https://github.com/Justice-Lu</a></dd>
+							<dt>Email</dt>
+							<dd><a href="#">hyjusticelu@gmail.com</a></dd>
+							<dt>Linkedin</dt>
+							<dd><a href="https://www.linkedin.com/in/justice-lu-1842a395/">https://www.linkedin.com/in/justice-lu</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="hyjusticelu@gmail.com" class="icon brands fa-google alt"><span class="label">Google</span></a></li>
+							<li><a href="https://github.com/Justice-Lu" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/justice-lu-1842a395/" class="icon brands fa-linkedin alt"><span class="label">fa-linkedin</span></a></li>
+						</ul>
+					</section>
+					<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+				</footer>
+			<!-- </div> -->
 
-			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<!-- <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script> -->
 
 	</body>
 </html>
