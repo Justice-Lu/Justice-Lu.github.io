@@ -3358,8 +3358,10 @@ input, select, textarea {
 	#main {
 		background-color: #fffffff0;
 		color: #000000; 
-		border-radius: 5em;
+		border-radius: 1em;
 		border-width: 10em;
+		margin-left: 5vw;
+		margin-right: 5vw;
 		/* max-width: 95%; */
 	}
 
