@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+					<header>
+						<br></br>
+						<h1>Tracing mouse location</h1>
+						<br></br>
+					</header>
+					<div id="main">
+
+						<!-- Content -->
+							<section class="main">
+								<h2>Behavorial Experiment</h2>
+								<p>One of the major pitfall of bahvorial experiment is that it not only has a lot of external variables but more importantly they are extremely laborious and time consuming. 
+									Here I've demonstrated a quick script for mouse tracing in order to apply to wide variety of bahavorial assays. 
+									Instead of staring at the screen and recording the movement of mice, you can now can now go and enjoy Netflix instead. 
+								</p>
+									
+								
+								<p></p>
+								
+								<h2>Raw Video File</h2>
+								<p>This is a recorded video of mice given a odor preference / avoidance test. In the left room, there is a no odor control whereas the right side of the room contains a sulfur bad smelling odor. The goal is to see if mouse has preference to either rooms. 
+									<img src="/images/3_Mouse_tracing/raw_frame.gif" 
+									width=100%/></br>
+									However, in order for the computer to recognize and find the mouse location, we have to first convert the image to a binary input that's easier detectable by the computer. 
+								</p>
+
+								
+								<h2>Video Processing</h2>
+								<p>
+									The first step is to find the region of interest, this way we can limit the video down to smaller size with less error and noise. 
+									After series of image processing and threshold conversion, we're able to get a much cleaner video that can be easier detected by the software. 
+								</p>
+								<img src="/images/3_Mouse_tracing/mask.gif" 
+								width=100%/>
+								<p>Here we can broadly observe that most chemical groups does not have an global impact in driving overall OR activation. However, certain groups of odor are robust enough to deviate, such as the thiazole and Ketones category.</p>
+								
+								<h2>Tracing and labeling video</h2>
+								<p>
+									Now that we have a nice and clean video outlining the location of the mouse. We can simply label the original video file using the thresholded location with better visual markers and traces to see mouse's trajectory path. 
+									<img src="/images/3_Mouse_tracing/frame.gif" 
+										width=100%/>
+								</p>							
+								<p>
+									All of the following analysis and code can be found in my <a href="https://github.com/Justice-Lu/Mouse_tracing">mouse tracing repository</a>.
+								</p>
+
+							</section>
+
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h1>Contact</h1>
+							<dl class="alt">
+								<dt>Github</dt>
+								<dd><a href="https://github.com/Justice-Lu">https://github.com/Justice-Lu</a></dd>
+								<dt>Email</dt>
+								<dd><a href="#">hyjusticelu@gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="hyjusticelu@gmail.com" class="icon brands fa-google alt"><span class="label">Google</span></a></li>
+								<li><a href="https://github.com/Justice-Lu" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/justice-lu-1842a395/" class="icon brands fa-linkedin alt"><span class="label">fa-linkedin</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+			</div>
+	</body>
+</html>
