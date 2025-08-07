@@ -1,87 +1,204 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Generic - Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Justice Lu</title>
+  <style>
+    html, body {
+      margin: 0;
+      font-family: Arial;
+      background-color: #ffffff;
+      color: #333;
+      height: 100%; 
+      display:flex; 
+      flex-direction: column;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-					<header>
-						<br></br>
-						<h1>Tracing mouse location</h1>
-						<br></br>
+    .wrapper-masthead, 
+    .wrapper-footer {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 1em 0;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header.masthead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .site-avatar img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .site-info {
+      flex-grow: 1;
+      margin-left: 1em;
+    }
+
+    .site-name {
+      margin: 0;
+      font-size: 1.6em;
+    }
+
+    .site-description {
+      margin: 0;
+      font-size: 1em;
+      color: #666;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #000000;
+    }
+
+    nav a:hover {
+      font-weight: bold;
+    }
+
+    a {
+        font-size: 1em;
+        color: #4c99d4;
+        text-decoration: None;
+    }
+
+    h3{
+        color: 	#565656; 
+        font-weight: normal; 
+    }
+
+    p {
+        line-height: 1.2;
+        font-size: 0.8em;
+        max-width: 100%;
+        margin: 0 0 1 0;
+        text-align: left;
+    }
+
+    footer.footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 0;
+        font-size: 0.9em;
+        color: #888;
+        background-color: #ffffff;
+        flex-wrap: wrap;
+    }
+
+    .footer-left,
+    .footer-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-right a {
+        margin-left: 1em;
+        color: #007acc;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-left p {
+        margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+		<div class="content">
+			<div class="wrapper-masthead">
+				<div class="container">
+					<header class="masthead clearfix">
+						<div class="site-info">
+							<h1 class="site-name">Justice (Hsiu-Yi) Lu</h1>
+							<p class="site-description">PhD Candidate at Duke University</p>
+						</div>
+						<nav>
+							<a href="../index.html">Home</a>
+							<a href="About.html">About</a>
+							<a href="Research.html">Research</a>
+							<a href="CV">Resume</a>
+						</nav>
 					</header>
-					<div id="main">
-
-						<!-- Content -->
-							<section class="main">
-								<h2>Behavorial Experiment</h2>
-								<p>One of the major pitfall of bahvorial experiment is that it not only has a lot of external variables but more importantly they are extremely laborious and time consuming. 
-									Here I've demonstrated a quick script for mouse tracing in order to apply to wide variety of bahavorial assays. 
-									Instead of staring at the screen and recording the movement of mice, you can now can now go and enjoy Netflix instead. 
-								</p>
-									
-								
-								<p></p>
-								
-								<h2>Raw Video File</h2>
-								<p>This is a recorded video of mice given a odor preference / avoidance test. In the left room, there is a no odor control whereas the right side of the room contains a sulfur bad smelling odor. The goal is to see if mouse has preference to either rooms. 
-									<img src="/images/3_Mouse_tracing/raw_frame.gif" 
-									width=100%/></br>
-									However, in order for the computer to recognize and find the mouse location, we have to first convert the image to a binary input that's easier detectable by the computer. 
-								</p>
-
-								
-								<h2>Video Processing</h2>
-								<p>
-									The first step is to find the region of interest, this way we can limit the video down to smaller size with less error and noise. 
-									After series of image processing and threshold conversion, we're able to get a much cleaner video that can be easier detected by the software. 
-								</p>
-								<img src="/images/3_Mouse_tracing/mask.gif" 
-								width=100%/>
-								<p>Here we can broadly observe that most chemical groups does not have an global impact in driving overall OR activation. However, certain groups of odor are robust enough to deviate, such as the thiazole and Ketones category.</p>
-								
-								<h2>Tracing and labeling video</h2>
-								<p>
-									Now that we have a nice and clean video outlining the location of the mouse. We can simply label the original video file using the thresholded location with better visual markers and traces to see mouse's trajectory path. 
-									<img src="/images/3_Mouse_tracing/frame.gif" 
-										width=100%/>
-								</p>							
-								<p>
-									All of the following analysis and code can be found in my <a href="https://github.com/Justice-Lu/Mouse_tracing">mouse tracing repository</a>.
-								</p>
-
-							</section>
-
-					</div>
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h1>Contact</h1>
-							<dl class="alt">
-								<dt>Github</dt>
-								<dd><a href="https://github.com/Justice-Lu">https://github.com/Justice-Lu</a></dd>
-								<dt>Email</dt>
-								<dd><a href="#">hyjusticelu@gmail.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="hyjusticelu@gmail.com" class="icon brands fa-google alt"><span class="label">Google</span></a></li>
-								<li><a href="https://github.com/Justice-Lu" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/justice-lu-1842a395/" class="icon brands fa-linkedin alt"><span class="label">fa-linkedin</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+				</div>
 			</div>
+
+			<div class="container">
+				<section class="wrapper style1">
+					<h2>Behavorial Experiment</h2>
+					<p>One of the major pitfall of bahvorial experiment is that it not only has a lot of external variables but more importantly they are extremely laborious and time consuming. 
+						Here I've demonstrated a quick script for mouse tracing in order to apply to wide variety of bahavorial assays. 
+						Instead of staring at the screen and recording the movement of mice, you can now can now go and enjoy Netflix instead. 
+					</p>
+						
+					
+					<p></p>
+					
+					<h2>Raw Video File</h2>
+					<p>This is a recorded video of mice given a odor preference / avoidance test. In the left room, there is a no odor control whereas the right side of the room contains a sulfur bad smelling odor. The goal is to see if mouse has preference to either rooms. 
+						<img src="../images/3_Mouse_tracing/raw_frame.gif" 
+						width=100%/>
+						However, in order for the computer to recognize and find the mouse location, we have to first convert the image to a binary input that's easier detectable by the computer. 
+					</p>
+
+					
+					<h2>Video Processing</h2>
+					<p>
+						The first step is to find the region of interest, this way we can limit the video down to smaller size with less error and noise. 
+						After series of image processing and threshold conversion, we're able to get a much cleaner video that can be easier detected by the software. 
+					</p>
+					<img src="../images/3_Mouse_tracing/mask.gif" 
+					width=100%/>
+					<p>Here we can broadly observe that most chemical groups does not have an global impact in driving overall OR activation. However, certain groups of odor are robust enough to deviate, such as the thiazole and Ketones category.</p>
+					
+					<h2>Tracing and labeling video</h2>
+					<p>
+						Now that we have a nice and clean video outlining the location of the mouse. We can simply label the original video file using the thresholded location with better visual markers and traces to see mouse's trajectory path. 
+						<img src="../images/3_Mouse_tracing/frame.gif" 
+							width=100%/>
+					</p>							
+					<p>
+						All of the following analysis and code can be found in my <a href="https://github.com/Justice-Lu/Mouse_tracing">mouse tracing repository</a>.
+					</p>
+				</section>
+
+			</div>
+			<footer class="footer wrapper-footer container">
+				<div class="footer-left">
+					<p>Justice Lu<br>
+						<a href="mailto:hyjusticelu@gmail.com">hyjusticelu@gmail.com</a>
+					</p>
+				</div>
+				<div class="footer-right">
+					<a href="https://github.com/Justice-Lu" target="_blank">
+						<span class="icon icon--github">
+							<svg viewBox="0 0 16 16" width="16px" height="16px">
+								<path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
+							</svg>
+						</span>
+						<span class="username">Justice-Lu</span>
+					</a>
+				</div>
+			</footer>
+		</div>
 	</body>
 </html>

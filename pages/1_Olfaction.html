@@ -1,33 +1,157 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Generic - Stellar by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Justice Lu</title>
+  <style>
+    html, body {
+      margin: 0;
+      font-family: Arial;
+      background-color: #ffffff;
+      color: #333;
+      height: 100%; 
+      display:flex; 
+      flex-direction: column;
+    }
+
+    .wrapper-masthead, 
+    .wrapper-footer {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 1em 0;
+    }
+
+    .content {
+        flex: 1;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header.masthead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .site-avatar img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .site-info {
+      flex-grow: 1;
+      margin-left: 1em;
+    }
+
+    .site-name {
+      margin: 0;
+      font-size: 1.6em;
+    }
+
+    .site-description {
+      margin: 0;
+      font-size: 1em;
+      color: #666;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #000000;
+    }
+
+    nav a:hover {
+      font-weight: bold;
+    }
+
+    a {
+        font-size: 1em;
+        color: #4c99d4;
+        text-decoration: None;
+    }
+
+    h3{
+        color: 	#565656; 
+        font-weight: normal; 
+    }
+
+    p {
+        line-height: 1.2;
+        font-size: 0.8em;
+        max-width: 100%;
+        margin: 0 0 1 0;
+        text-align: left;
+    }
+
+    footer.footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 0;
+        font-size: 0.9em;
+        color: #888;
+        background-color: #ffffff;
+        flex-wrap: wrap;
+    }
+
+    .footer-left,
+    .footer-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-right a {
+        margin-left: 1em;
+        color: #007acc;
+        text-decoration: none;
+    }
+
+    .footer-right a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-left p {
+        margin: 0;
+    }
+
+  </style>
 	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-					<header>
-						<br></br>
-						<h1>Exploring and measuring smell</h1>
-						<br></br>
+	<body>
+		<div class="content">
+			<div class="wrapper-masthead">
+				<div class="container">
+					<header class="masthead clearfix">
+						<div class="site-info">
+							<h1 class="site-name">Justice (Hsiu-Yi) Lu</h1>
+							<p class="site-description">PhD Candidate at Duke University</p>
+						</div>
+						<nav>
+							<a href="../index.html">Home</a>
+							<a href="About.html">About</a>
+							<a href="Research.html">Research</a>
+							<a href="CV">Resume</a>
+						</nav>
 					</header>
-					<div id="main">
+				</div>
+			</div>
 
-						<!-- Content -->
+			<div class="container">
+				<section class="wrapper style1">
+						<header>
+							<h2>Exploring and measuring smell</h2>
+						</header>
+						<div id="main">
 							<section id="content" class="main">
-								<h2 id="differential-gene-expression-data">Differential gene expression data</h2>
+								<h3 id="differential-gene-expression-data">Differential gene expression data</h3>
 								<p>The data table below is prepossessed by DEseq2 to calculate gene-level differential expression.</p>
-									<pre><code>##      ensembl_gene_id     logFC          FDR No1 No2 No3  ST1  ST2  ST3       id
+								<pre><code>##      ensembl_gene_id     logFC          FDR No1 No2 No3  ST1  ST2  ST3       id
 ## 1 ENSMUSG00000059069 2.5448640 6.676352e-65 144 298 249 1299 1764 1605  Olfr749
 ## 2 ENSMUSG00000053815 2.4720328 2.460729e-21  40 100  54  388  421  407  Olfr744
 ## 3 ENSMUSG00000075200 2.1649039 2.596337e-17  49  62  55  356  255  285 Olfr1044
@@ -37,17 +161,17 @@
 								
 								<p>From such data table it’s hard to understand what we’re looking for or what’s actually different. Therefore it’s often a good idea to restructure your data table into simpler form. Also keep in mind that when trimming data table, different analysis may require different measurements and structure.</p>
 								
-								<h2 id="volcano-plot">Volcano plot</h2>
+								<h3 id="volcano-plot">Volcano plot</h3>
 								<p>A simple way to visualize and differential gene expression is through a volcano plot. The volcano plot showcases the genes that are either enriched in mouse given odor (right side) or control (left).
-									<img src="/images/1_Olfaction/volcano.png" 
-									width=100%/></br>
+									<img src="../images/1_Olfaction/volcano.png" 
+									width=100%/>
 									Although there are advantages to volcano plots displaying the differentially expressed 
 									genes easily from the DEseq2 output. Volcano plots are one dimensional and only looks 
 									at raw fold change values and FDR. 
 								</p>
 
 								
-								<h2 id="ways-to-visualize-data">Ways to visualize data</h2>
+								<h3 id="ways-to-visualize-data">Ways to visualize data</h3>
 								<p>
 									Additionally we can utilize different data analysis and plots to visualize and more importantly ask different questions.
 									A classic way of visualizing how different certain samples are is to utilize the principle component analysis (pca). 
@@ -55,19 +179,19 @@
 									As principle component metric is able to compile X numbers of numeric metrics into a 2 dimensional space. 
 									And therefore on a plot, it showcases the closer the samples are the more similarity they have. 
 								</p>
-								<img src="/images/1_Olfaction/pca.png" 
+								<img src="../images/1_Olfaction/pca.png" 
 								width=100%/>
 								<p>Here we can broadly observe that most chemical groups does not have an global impact in driving overall OR activation. However, certain groups of odor are robust enough to deviate, such as the thiazole and Ketones category.</p>
 								
-								<h2 id="heatmap">Heatmap</h2>
+								<h3 id="heatmap">Heatmap</h3>
 								<p>
 									Another interesting way of visualizing such data is to use heatmap. 
 									Heatmap is extremely efficient in looking at large datasets and finding certain trends or unique outliers.
-									<img src="/images/1_Olfaction/heatmap.png" 
+									<img src="../images/1_Olfaction/heatmap.png" 
 										width=100%/>
 								</p>
 
-								<h2 id="dotplot-search-function">Dotplot search function</h2>
+								<h3 id="dotplot-search-function">Dotplot search function</h3>
 								<p>
 									Say that we’re interested in a certain chemical, in this case 2-Methyl-2-Thiazoline 
 									(2mt). Since 2mt is one of the very few odors in the natural environment that 
@@ -77,7 +201,7 @@
 									specific ORs also are responding to. We take those ORs are search our data, and a
 									good way of illustrating such idea is to not only look at logFC but also how significant is such result depicted by FDR value.</p>
 								<p>
-									<img src="/images/1_Olfaction/dotplot.png" 
+									<img src="../images/1_Olfaction/dotplot.png" 
 									width=100%/>
 
 									This is not the end of the analysis. But hopefully this vignette demonstrated that data analysis is extremely fun and provides multiple angle in how you can visualize and ask different questions in a complex biological dataset.
@@ -85,25 +209,26 @@
 
 							</section>
 
-					</div>
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h1>Contact</h1>
-							<dl class="alt">
-								<dt>Github</dt>
-								<dd><a href="https://github.com/Justice-Lu">https://github.com/Justice-Lu</a></dd>
-								<dt>Email</dt>
-								<dd><a href="#">hyjusticelu@gmail.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="hyjusticelu@gmail.com" class="icon brands fa-google alt"><span class="label">Google</span></a></li>
-								<li><a href="https://github.com/Justice-Lu" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/justice-lu-1842a395/" class="icon brands fa-linkedin alt"><span class="label">fa-linkedin</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+						</div>
+
+						<footer class="footer wrapper-footer container">
+							<div class="footer-left">
+								<p>Justice Lu<br>
+									<a href="mailto:hyjusticelu@gmail.com">hyjusticelu@gmail.com</a>
+								</p>
+							</div>
+							<div class="footer-right">
+								<a href="https://github.com/Justice-Lu" target="_blank">
+									<span class="icon icon--github">
+										<svg viewBox="0 0 16 16" width="16px" height="16px">
+											<path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
+										</svg>
+									</span>
+									<span class="username">Justice-Lu</span>
+								</a>
+							</div>
+						</footer>
+				</div>
 			</div>
 	</body>
 </html>
